@@ -14,3 +14,7 @@ def save_data_helper(videos):
     with open(youtube_file_txt, 'w') as file:
         json.dump(videos, file)
 
+def list_all_videos(videos):
+    for index, video in enumerate(videos, start=1):
+        print(f'{index}. ')
+
