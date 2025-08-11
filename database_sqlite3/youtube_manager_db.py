@@ -12,3 +12,8 @@ cursor.execute('''
                )
 ''')
 
+def list_videos():
+    cursor.execute("SELECT * FROM videos")
+    for row in cursor.fetchall():
+        print(row)
+
