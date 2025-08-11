@@ -17,3 +17,7 @@ def list_videos():
     for row in cursor.fetchall():
         print(row)
 
+def add_video(name, time):
+    cursor.execute("INSERT INTO videos (name, time) VALUES (?, ?)", (name, time))
+    conn.commit()
+
