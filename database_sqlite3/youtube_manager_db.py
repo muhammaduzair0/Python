@@ -21,3 +21,7 @@ def add_video(name, time):
     cursor.execute("INSERT INTO videos (name, time) VALUES (?, ?)", (name, time))
     conn.commit()
 
+def update_video(video_id, new_name, new_time):
+    cursor.execute("UPDATE videos SET name = ?, time = ? WHERE id = ?", (new_name, new_time, video_id))
+    conn.commit()
+
